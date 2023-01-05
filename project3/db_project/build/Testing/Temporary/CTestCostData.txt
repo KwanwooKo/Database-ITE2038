@@ -1,0 +1,27 @@
+BpTree.Scan 15 0.000508321
+BpTree.DescendingInsert 13 10.7698
+BpTree.AscendingInsert 173 0.0542754
+BpTree.RandomInsert 7 33.0987
+BpTree.InitTest 0 0
+BpTree.FindSingleKey 31 0.0367819
+BpTree.PrintTree 62 8.93293e-05
+BpTree.BufferPrint 1 0.00175347
+BpTree.DeleteAscending 24 1.60852
+BpTree.BufferReadTest 43 0.0511526
+BpTree.BufferInsert 22 0.00808878
+BpTree.OpenTableTest 1 2.17579
+BpTree.NotFindSingleKey 8 0.0252225
+BpTree.DeleteDescending 8 6.14857
+BPlus.InsertOperationRandomized 47 7.31186
+BPlus.DeleteOperationRandomized 18 17.1825
+BpTree.Insert 9 0.0258292
+BpTree.BufferTest 1 0.00182225
+BPlus.Find 11 0.0750761
+BPlus.NotFind 1 0.171471
+BPlus.InsertOperationSmall 7 0.314996
+BPlus.DeleteOperationSmall 7 0.00146367
+Bplus.ScanTest 6 0.485459
+Bpt.insert 2 1.16299
+BPlus.DoubleOpen 0 0
+BPlus.RandomInsert 1 499.304
+---

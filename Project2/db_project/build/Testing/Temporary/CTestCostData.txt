@@ -1,0 +1,23 @@
+FileTest.FindLeafPageOperation 13 39.5688
+FileTest.FindSingleKey 129 0.000353348
+FileTest.PrintTree 220 4.27396e-05
+FileTest.Scan 0 0
+FileTest.CheckReadWriteOperation 2 0.00652689
+FileTest.RootPageCheck 0 0
+FileTest.Insert 27 0.90946
+FileTest.DuplicateCheck 3 0
+FileTest.DescendingInsert 84 0.0314088
+FileTest.AscendingInsert 48 0.133236
+BpTree.AscendingInsert 129 0.0430421
+BpTree.PrintTree 276 7.27255e-06
+BpTree.FindSingleKey 20 0.108212
+BpTree.Scan 23 0.000471355
+BpTree.RandomInsert 7 35.4124
+BpTree.Delete 0 0
+BpTree.DeleteAscending 175 0.181883
+BpTree.PrintTreeAfter 3 0.000647073
+BpTree.NotFindSingleKey 3 0.260087
+BpTree.DeleteDescending 4 66.0385
+BpTree.DeleteRandom 17 25.061
+BpTree.DescendingInsert 1 126.391
+---

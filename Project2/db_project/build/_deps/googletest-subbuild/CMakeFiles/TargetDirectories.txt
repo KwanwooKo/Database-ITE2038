@@ -1,0 +1,3 @@
+/home/kwanwoo/Desktop/database/Project2/db_project/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+/home/kwanwoo/Desktop/database/Project2/db_project/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+/home/kwanwoo/Desktop/database/Project2/db_project/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir
