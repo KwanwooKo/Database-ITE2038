@@ -1,5 +1,0 @@
-if(EXISTS "/Users/kwanwoo/github/Database-ITE2038/project5/db_project/build/test/db_test[1]_tests.cmake")
-  include("/Users/kwanwoo/github/Database-ITE2038/project5/db_project/build/test/db_test[1]_tests.cmake")
-else()
-  add_test(db_test_NOT_BUILT db_test_NOT_BUILT)
-endif()

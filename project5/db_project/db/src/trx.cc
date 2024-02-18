@@ -1,4 +1,4 @@
-#include "../include/trx.h"
+#include "trx.h"
 #define DEBUG 0
 #define SHARED 0
 #define EXCLUSIVE 1

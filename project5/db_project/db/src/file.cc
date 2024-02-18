@@ -1,4 +1,4 @@
-#include "../include/file.h"
+#include "file.h"
 #include <errno.h>
 using namespace std;
 

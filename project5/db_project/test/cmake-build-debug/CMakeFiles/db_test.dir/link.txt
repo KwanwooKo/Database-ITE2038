@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -rdynamic CMakeFiles/db_test.dir/file_test.o -o db_test   -L/tmp/tmp.dIrX13OUnU/cmake-build-debug/lib  -ldb lib/libgtest_maind.a lib/libgtestd.a 
