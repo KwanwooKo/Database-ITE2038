@@ -1,5 +1,5 @@
-#include "bpt.h"
-#include "trx.h"
+#include "../include/bpt.h"
+#include "../include/trx.h"
 #define SLOT_PAGE_SIZE 16
 int64_t open_table(const char * pathname) {
     int64_t unique_id = file_open_table_file(pathname);

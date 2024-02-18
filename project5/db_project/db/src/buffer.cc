@@ -1,5 +1,5 @@
-#include "bpt.h"
-#include "buffer.h"
+#include "../include/bpt.h"
+#include "../include/buffer.h"
 #include <pthread.h>
 pthread_mutex_t buffer_manager_latch = PTHREAD_MUTEX_INITIALIZER;
 Buffer *buffer_queue;

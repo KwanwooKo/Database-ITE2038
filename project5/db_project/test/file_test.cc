@@ -1,8 +1,8 @@
-#include "file.h"
-#include "page.h"
-#include "buffer.h"
-#include "trx.h"
-#include "bpt.h"
+#include "../db/include/file.h"
+#include "../db/include/page.h"
+#include "../db/include/buffer.h"
+#include "../db/include/trx.h"
+#include "../db/include/bpt.h"
 #include <ctime>
 #include <gtest/gtest.h>
 #include <string>
@@ -99,35 +99,35 @@ protected:
 //     trx_commit(trx_id);
 // }
 
-TEST_F(BpTree, UpdateTest) {
-    char* value = (char *) malloc(sizeof(char) * 112);
-    memcpy(value, "Gabriel Martinelli", 112);
-    int trx_id = trx_begin();
-    uint16_t value_size = 112;
-    uint16_t new_val_size = 112;
-    for (int i = 1; i <= SIZE; i++) {
-        if (i % 100 == 0) {
-            EXPECT_NE(trx_commit(trx_id), 0);
-            trx_id = trx_begin();
-        }
-        printf("update %d\n", i);
-        EXPECT_EQ(db_update(fd, i, value, new_val_size, &value_size, trx_id), 0);
-        // db_insert(fd, i, "Gabriel Jesus", value_size);
-    }
-    EXPECT_NE(trx_commit(trx_id), 0);
-    printf("trx commit\n");
-    
-
-    char* ret_val = (char*)malloc(sizeof(char) * 112);
-    uint16_t* val_size = (uint16_t*)malloc(sizeof(uint16_t));
-
-    for (int i = 1; i <= SIZE; i++) {
-        std::cout << "find " << i << "시작\n";
-        EXPECT_EQ(db_find(fd, i, ret_val, val_size), 0);
-        // ASSERT_EQ(strcmp(ret_val, "Gabriel Martinelli"), 0);
-        std::cout << "val: " << ret_val << '\n';
-    }
-}
+//TEST_F(BpTree, UpdateTest) {
+//    char* value = (char *) malloc(sizeof(char) * 112);
+//    memcpy(value, "Gabriel Martinelli", 112);
+//    int trx_id = trx_begin();
+//    uint16_t value_size = 112;
+//    uint16_t new_val_size = 112;
+//    for (int i = 1; i <= SIZE; i++) {
+//        if (i % 100 == 0) {
+//            EXPECT_NE(trx_commit(trx_id), 0);
+//            trx_id = trx_begin();
+//        }
+//        printf("update %d\n", i);
+//        EXPECT_EQ(db_update(fd, i, value, new_val_size, &value_size, trx_id), 0);
+//        // db_insert(fd, i, "Gabriel Jesus", value_size);
+//    }
+//    EXPECT_NE(trx_commit(trx_id), 0);
+//    printf("trx commit\n");
+//
+//
+//    char* ret_val = (char*)malloc(sizeof(char) * 112);
+//    uint16_t* val_size = (uint16_t*)malloc(sizeof(uint16_t));
+//
+//    for (int i = 1; i <= SIZE; i++) {
+//        std::cout << "find " << i << "시작\n";
+//        EXPECT_EQ(db_find(fd, i, ret_val, val_size), 0);
+//        // ASSERT_EQ(strcmp(ret_val, "Gabriel Martinelli"), 0);
+//        std::cout << "val: " << ret_val << '\n';
+//    }
+//}
 
 // TEST_F(BpTree, FindSingleKey) {
 //     char* ret_val = (char*)malloc(sizeof(char) * 112);
@@ -195,26 +195,26 @@ TEST_F(BpTree, UpdateTest) {
 
 
 
-// TEST_F(BpTree, AscendingInsert) {
-//     char* ret_val = (char*)malloc(sizeof(char) * 112);
-//     uint16_t* val_size = (uint16_t*)malloc(sizeof(uint16_t));
+ TEST_F(BpTree, AscendingInsert) {
+     char* ret_val = (char*)malloc(sizeof(char) * 112);
+     uint16_t* val_size = (uint16_t*)malloc(sizeof(uint16_t));
 
-//     // srand((unsigned int)time(NULL));
-//     for (int i = 1; i <= SIZE; i++) {
-//         printf("insert %d\n", i);
-//         // int value_size = rand() % 63 + 50;
-//         // int value_size = 50;
-//         int value_size = 112;
-//         EXPECT_EQ(db_insert(fd, i, "Bukayo Saka", value_size), 0);
-//         // EXPECT_EQ(db_find(fd, i, ret_val, val_size), 0);
-//         // db_insert(fd, i, "Bukayo Saka", value_size);
-//     }
+     // srand((unsigned int)time(NULL));
+     for (int i = 1; i <= SIZE; i++) {
+         printf("insert %d\n", i);
+         // int value_size = rand() % 63 + 50;
+         // int value_size = 50;
+         int value_size = 112;
+         EXPECT_EQ(db_insert(fd, i, "Bukayo Saka", value_size), 0);
+         // EXPECT_EQ(db_find(fd, i, ret_val, val_size), 0);
+         // db_insert(fd, i, "Bukayo Saka", value_size);
+     }
 
-//     free(ret_val);
-//     free(val_size);
-//     // int is_removed = remove(pathname.c_str());
-//     // ASSERT_EQ(is_removed, 0);
-// }
+     free(ret_val);
+     free(val_size);
+     // int is_removed = remove(pathname.c_str());
+     // ASSERT_EQ(is_removed, 0);
+ }
 
 
 
